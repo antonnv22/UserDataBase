@@ -26,15 +26,17 @@ public class UserController {
     public ModelAndView allUsers() {
         List<User> users = userService.allUsers();
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("users");
+        modelAndView.setViewName("usersPage");
         modelAndView.addObject("usersList", users);
         return modelAndView;
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public ModelAndView addPage() {
+        User user = new User();
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("editPage");
+        modelAndView.setViewName("addUser");
+        modelAndView.addObject("user", user);
         return modelAndView;
     }
 
