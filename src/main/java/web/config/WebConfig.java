@@ -18,22 +18,10 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 @EnableWebMvc
 @ComponentScan("web")
 public class WebConfig implements WebMvcConfigurer {
-
-//    @Bean
-//    ViewResolver viewResolver() {
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setPrefix("/WEB-INF/pages/");
-//        viewResolver.setSuffix(".jsp");
-//        viewResolver.setViewClass(JstlView.class);
-//        return viewResolver;
-//    }
-
     private final ApplicationContext applicationContext;
-
     public WebConfig(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
-
 
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
