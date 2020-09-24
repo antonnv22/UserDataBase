@@ -2,9 +2,7 @@ package web.service;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import web.dao.UserDAO;
-import web.dao.UserDAOImpl;
 import web.model.User;
 import org.springframework.stereotype.Service;
 import java.util.List;
